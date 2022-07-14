@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+            debugger;
+    let array = [
+        [2,3,4,5],
+        [1,6,7,8],
+        [7,4,9,8]           
+    ];
+    let sum_max = 0; // tổng mảng lớn nhất in ra màn hình
+    let index_max = 0;
+    for (let i = 0; i<array.length; i++) {
+        let sum_child = 0;          // tổng từng mảng 
+
+        for (let j=0; j < array[i].length; j++) {
+                sum_child += array[i][j];
+
+            }if (sum_max <= sum_child) {
+                sum_max = sum_child;
+                index_max = i;
+        }
+    }document.write("Hàng có tổng lớn nhất có tổng là " + sum_max + "<br>" + "Ở vị trí " + index_max);
+</script>
